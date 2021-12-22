@@ -1,0 +1,16 @@
+<h1>Tic Tac Toe!</h1>
+
+<button id="new-game-button" (click)="newGame()">New Game</button>
+
+<h2>
+  Player <span>{{ currPlayer }}</span
+  >'s move.
+</h2>
+
+<main>
+  <app-square
+    *ngFor="let square of squares; let i = index"
+    [value]="squares[i]"
+    (click)="squareClicked(i)"
+  ></app-square>
+</main>

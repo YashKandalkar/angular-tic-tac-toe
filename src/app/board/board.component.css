@@ -1,0 +1,61 @@
+h1 {
+  color: #63d471;
+  /* text-shadow: -1px 1px 4px #866214; */
+  font-size: 4rem;
+}
+
+h2 {
+  color: #4e8054;
+}
+
+h2 span {
+  color: #63d471;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1px;
+  margin: 0 auto;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 3px;
+}
+
+app-square {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.735rem;
+  height: 100%;
+  transition: all 0.3s;
+  border: 1px solid #365a3b;
+  background-color: #63d471;
+  color: #131b16;
+}
+
+app-square:hover {
+  background-color: #49b655;
+  cursor: pointer;
+}
+
+#new-game-button {
+  padding: 8px 16px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 2px;
+  border: none;
+  font-size: large;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #63a46c;
+  color: #060606;
+  transition: all 0.3s;
+}
+
+#new-game-button:hover {
+  background-color: #45744b;
+  cursor: pointer;
+}
