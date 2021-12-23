@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DadjokeService } from '../services/dadjoke.service';
 
 @Component({
   selector: 'app-board',
@@ -6,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.css'],
 })
 export class BoardComponent implements OnInit {
+  constructor(dadJokeService: DadjokeService) {
+    this.dadJokeService = dadJokeService;
+  }
+  dadJokeService: DadjokeService;
+  dadJoke: string = 'Loading...';
   squares: (null | 'X' | 'O')[] = Array<null | 'X' | 'O'>(9).fill(null);
   winner: string | null = null;
   currPlayer: 'X' | 'O' = 'X';
 
   ngOnInit(): void {
     this.newGame();
+    this.dadJokeService.getJoke().then((joke) => (this.dadJoke = joke));
   }
 
   newGame(): void {

@@ -1,4 +1,4 @@
-<h1>Tic Tac Toe!</h1>
+<h1 style="margin-bottom: 1rem">Tic Tac Toe!</h1>
 
 <button id="new-game-button" (click)="newGame()">New Game</button>
 
@@ -14,3 +14,7 @@
     (click)="squareClicked(i)"
   ></app-square>
 </main>
+
+<footer style="margin-top: 2rem; color: #4e8054">
+  Random dad joke:<span style="color: #63d471"> {{ dadJoke }}</span>
+</footer>
